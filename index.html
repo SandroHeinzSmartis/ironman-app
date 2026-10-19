@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <meta name="apple-mobile-web-app-title" content="Ironman">
+  <link rel="stylesheet" href="style.css">
+  <title>Ironman Trainingsplan</title>
+</head>
+<body>
+  <header>
+    <div>
+      <h1 id="race">Ironman</h1>
+      <p id="countdown"></p>
+    </div>
+    <button id="sync" class="iconbtn" aria-label="Mit Garmin synchronisieren">⟳</button>
+  </header>
+  <nav class="tabs">
+    <button data-view="tag" class="active">Heute</button>
+    <button data-view="woche">Woche</button>
+    <button data-view="stand">Stand</button>
+    <button data-view="grafik">Grafik</button>
+    <button data-view="essen">Essen</button>
+    <button data-view="einstellungen" aria-label="Einstellungen">⚙</button>
+  </nav>
+  <div class="pager" id="pager">
+    <button id="prev" aria-label="Zurück">‹</button>
+    <button id="label" class="label"></button>
+    <button id="next" aria-label="Weiter">›</button>
+  </div>
+  <div id="toast" hidden></div>
+  <main id="content"></main>
+  <script src="lebensmittel.js"></script>
+  <script src="app.js"></script>
+  <script src="grafik.js"></script>
+  <script src="essen.js"></script>
+</body>
+</html>
